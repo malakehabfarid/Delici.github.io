@@ -1,0 +1,435 @@
+@media (max-width: 1300px) {
+    .side-bar-popup .box {
+        width: 300px;
+    }
+    nav .container {
+        padding: 20px 10px;
+    }
+    nav .container .nav-links {
+        display: none !important;
+    }
+    nav .container .logo {
+        width: 30%;
+    }
+    #M-carousel>button{
+        display: none;
+    }
+    #M-carousel .M-carousel-item .M-carousel-caption h1 {
+        font-size: 30px;
+    }
+    #M-carousel .M-carousel-item .M-carousel-caption p {
+        font-size: 12px;
+    }
+    .mainButton {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+    #Home .booking {
+        bottom: 30px;
+        left: 30px;
+        width: 80px;
+        height: 80px;
+    }
+    .popUp .box {
+        width: 300px;
+        padding: 20px 30px;
+    }
+    .popupMenu .box .content .meal-image {
+        max-height: 165px;
+    }
+    .popupMenu .box .content .image-carousel .meal-price {
+        top: 10px;
+    }
+    .popupMenu .box .content .image-carousel .prev,
+    .popupMenu .box .content .image-carousel .next {
+        width: 30px;
+        height: 30px;
+        font-size: 13px;
+    }
+    .popupMenu .box .content .image-carousel .prev {
+        left: 15px;
+    }
+    .popupMenu .box .content .image-carousel .next {
+        right: 15px;
+    }
+    #AboutUs .title h2 {
+        font-size: 30px;
+    }
+    #AboutUs .aboutPar p {
+        width: 300px;
+    }
+    #AboutUs .content .box:nth-of-type(1),
+    #AboutUs .content .box:nth-of-type(3) {
+        transform: translateY(0);
+    }
+    #AboutUs .content .box:nth-of-type(2) {
+        transform: translateY(00px);
+    }
+    #AboutUs .content {
+        margin-top: 40px;
+    }
+    #OurStory .container .part1 .title h2 {
+        font-size: 30px;
+    }
+    #OurStory .container .part1 .content>p{
+        font-size: 14px;
+    }
+    #OurStory .container .part1 .content a {
+        font-size: 20px;
+    }
+    #OurStory .container .part2 .image1 img {
+        width: 250px;
+    }
+    #OurStory .container .part2 .image2 {
+        width: 95px;
+        top: -45px;
+        right: 10px;
+    }
+    #OurStory .container .part2 .image3 {
+        bottom: -65px;
+        left: -25px;
+    }
+    #OurStory .container .part2 .image3 img:nth-of-type(1) {
+        max-width: 60px;
+    }
+    #OurStory .container .part2 .image3 img:nth-of-type(2) {
+        max-width: 150px;
+    }
+    #SpecialDish .part1 {
+        height: 300px;
+    }
+    #SpecialDish .part2 {
+        padding: 50px 20px;
+    }
+    #SpecialDish .part2 .icon img {
+        width: 140px;
+    }
+    #SpecialDish .part2 .content .title h2 {
+        font-size: 30px;
+    }
+    #SpecialDish .part2 .content .box>p {
+        max-width: 100%;
+        line-height: 25px;
+        font-size: 14px;
+        font-weight: 300;
+    }
+    #SpecialDish .part2 .content .box .price p:nth-of-type(2) {
+        font-size: 20px;
+    }
+    #Menu .container .content .categories ul li:nth-of-type(odd) {
+        font-size: 14px;
+    }
+    #Menu .container .content .search {
+        max-width: 280px;
+    }
+    #Menu .container .content .menuContent .meals [class*=part] {
+        padding-inline: 14px;
+    }
+    #Menu .container .content .menuContent .meals [class*=part] .item .meal .image {
+        width: 90px;
+        height: 90px;
+    }
+    #Menu .container .content .menuContent .meals [class*=part] .item .meal .desc .mealName,
+    #Menu .container .content .menuContent .meals [class*=part] .item .meal .desc .mealPrice {
+        text-align: left;
+    }
+    #OurChefs .container .row .item {
+        max-width: 250px;
+        margin: auto;
+    }
+    #ContactUs .container .box1 {
+        max-width: 300px;
+    }
+    #ContactUs .container .box1 .form .desc p {
+        font-size: 13px;
+    }
+    .form-control::placeholder {
+        font-size: 14px;
+    }
+}
+    
+@media (min-width: 371px) and (max-width: 1300px) {
+    nav .container .logo {
+        width: 25%;
+    }
+    .side-bar-popup .box {
+        width: 350px;
+    }
+    #M-carousel .M-carousel-item .M-carousel-caption h1 {
+        font-size: 40px;
+    }
+    #M-carousel .M-carousel-item .M-carousel-caption p {
+        font-size: 14px;
+    }
+    .popUp .box {
+        width: 400px;
+    }
+    .popupMenu .box .content .meal-image {
+        max-height: 205px;
+    }
+    .popupMenu .box .content .image-carousel .meal-price {
+        top: 15px;
+    }
+    #AboutUs .aboutPar p {
+        width: 350px;
+    }
+    #OurStory .container .part2 .image1 img {
+        width: 280px;
+    }
+    #OurStory .container .part2 .image2 {
+        right: 45px;
+    }
+    #OurStory .container .part2 .image3 {
+        left: 0px;
+    }
+    #Menu .container .content .menuContent .meals [class*=part] {
+        padding-inline: 28px;
+    }
+    #Menu .container .content .menuContent .meals [class*=part] .item .meal .image {
+        width: 100px;
+        height: 100px;
+    }
+    #Menu .container .content .menuContent .meals [class*=part] .item .meal .desc p {
+        font-size: 15px;
+    }
+    #ContactUs .container .box1 {
+        max-width: 350px;
+    }
+    #ContactUs .container .box1 .form .desc p {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 1300px) {
+    .side-bar-popup .box {
+        width: 400px;
+    }
+    nav .container {
+        padding: 20px 0px;
+    }
+    nav .container .logo {
+        width: 25%;
+    }
+    #M-carousel .M-carousel-item .M-carousel-caption h1 {
+        font-size: 50px;
+    }
+    .mainButton {
+        font-size: 14px;
+    }
+    #AboutUs .title h2 {
+        font-size: 35px;
+    }
+    #AboutUs .aboutPar p {
+        width: 450px;
+    }
+    #OurStory .container .part2 .image2 {
+        right: 80px;
+    }
+    #OurStory .container .part2 .image3 {
+        left: 40px;
+    }
+    #SpecialDish .part2 {
+        padding: 50px 60px;
+    }
+    #SpecialDish .part2 .icon img {
+        width: 70px;
+    }
+    #SpecialDish .part2 .content .box>p {
+        max-width: 70%;
+        line-height: 30px;
+    }
+    #Menu .container .content .categories ul li:nth-of-type(odd) {
+        font-size: 15px;
+    }
+    #Menu .container .content .search {
+        max-width: 320px;
+    }
+    #OurChefs .container .row .item {
+        max-width: 300px;
+        margin: auto;
+    }
+    #ContactUs .container .box1 {
+        max-width: 400px;
+    }
+    #ContactUs .container .box1 .form .desc p {
+        font-size: 16px;
+    }
+    .form-control::placeholder {
+        font-size: 16px;
+    }
+    .popupMenu .box .content .meal-image {
+        max-height: 245px;
+    }
+    .popupMenu .box .content .image-carousel .meal-price {
+        top: 20px;
+    }
+    .popupMenu .box .content .image-carousel .prev,
+    .popupMenu .box .content .image-carousel .next {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    .popupMenu .box .content .image-carousel .prev {
+        left: 20px;
+    }
+    .popupMenu .box .content .image-carousel .next {
+        right: 20px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1300px) {
+    nav .container .logo {
+        width: 20%;
+    }
+    #M-carousel .M-carousel-item .M-carousel-caption h1 {
+        font-size: 70px;
+    }
+    .popUp .box {
+        width: 500px;
+        padding: 30px 40px;
+    }
+    .popupMenu .box .content .meal-image {
+        max-height: 310px;
+    }
+    #AboutUs .title h2 {
+        font-size: 40px;
+    }
+    #AboutUs .aboutPar p {
+        width: 550px;
+    }
+    #OurStory .container .part1 .title h2 {
+        font-size: 35px;
+    }
+    #OurStory .container .part1 .content>p{
+        width: 90%;
+        font-size: 14px;
+    }
+    #OurStory .container .part1 .content a {
+        font-size: 20px;
+    }
+    #OurStory .container .part2{
+        margin-top: 50px;
+    }
+    #OurStory .container .part2 .image2 {
+        right: 0px;
+    }
+    #OurStory .container .part2 .image3 {
+        left: -40px;
+        bottom: 45px;
+    }
+    #SpecialDish .part1 {
+        height: 550px;
+    }
+    #SpecialDish .part2 {
+        padding: 50px 30px;
+    }
+    #SpecialDish .part2 .icon img {
+        width: 120px;
+    }
+    #SpecialDish .part2 .content .title h2 {
+        font-size: 40px;
+    }
+    #SpecialDish .part2 .content .box>p {
+        max-width: 95%;
+        line-height: 30px;
+    }
+    #Menu .container .content .categories ul li:nth-of-type(odd) {
+        font-size: 16px;
+    }
+    #Menu .container .content .search {
+        max-width: 350px;
+    }
+    #Menu .container .content .menuContent .meals [class*=part] {
+        padding-inline: 110px;
+    }
+    #ContactUs .container .box1 {
+        max-width: 450px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1300px) {
+    nav .container .nav-links {
+        display: flex !important;
+    }
+    #AboutUs .title h2 {
+        font-size: 45px;
+    }
+    #AboutUs .aboutPar p {
+        width: 400px;
+    }
+    #AboutUs .content .box:nth-of-type(1),
+    #AboutUs .content .box:nth-of-type(3) {
+        transform: translateY(-100px);
+    }
+    #OurStory .container .part1 .content>p {
+        width: 95%;
+        font-size: 14px;
+    }
+    #OurStory .container .part2{
+        margin-top: 0px;
+    }
+    #OurStory .container .part2 .image1 img {
+        width: 360px;
+    }
+    #OurStory .container .part2 .image2 {
+        right: 20px;
+        width: 110px;
+    }
+    #OurStory .container .part2 .image3 {
+        left: -20px;
+        bottom: -50px;
+    }
+    #OurStory .container .part2 .image3 img:nth-of-type(1) {
+        max-width: 95px;
+    }
+    #OurStory .container .part2 .image3 img:nth-of-type(2) {
+        max-width: 225px;
+    }
+    #SpecialDish .part1 {
+        height: 600px;
+    }
+    #SpecialDish .part2 {
+        padding: 100px 40px;
+    }
+    #SpecialDish .part2 .icon img {
+        width: 100px;
+    }
+    #SpecialDish .part2 .content .title h2 {
+        font-size: 40px;
+    }
+    #SpecialDish .part2 .content .box>p {
+        font-size: 16px;
+        width: 85%;
+    } 
+    #Menu .container .content .categories ul li:nth-of-type(odd) {
+        font-size: 18px;
+    }
+    #Menu .container .content .menuContent .meals [class*=part] {
+        padding-inline: 0px;
+    }
+    #Menu .container .content .menuContent .meals [class*=part] .item .meal .image {
+        width: 80px;
+        height: 80px;
+    }
+    #ContactUs .container .box1 {
+        max-width: 500px;
+    }
+}
+
+@media (min-width: 1181px) and (max-width: 1300px) {
+    #OurStory .container .part2 .image2 {
+        right: 50px;
+    }
+    #OurStory .container .part2 .image3 {
+        left: 20px;
+    }
+    #SpecialDish .part2 .icon img {
+        width: 80px;
+    }
+    #SpecialDish .part2 .content .box .price p:nth-of-type(2) {
+        font-size: 25px;
+    }
+    #Menu .container .content .menuContent .meals [class*=part] .item .meal .desc p {
+        font-size: 20px;
+    }
+}
