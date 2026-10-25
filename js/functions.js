@@ -1,125 +1,123 @@
-
 function openSideBar() {
-    let sideBarEle = document.querySelector(".side-bar-popup");
-    sideBarEle.classList.add('active');
-    setTimeout(function() {
-        sideBarEle.classList.add('show');
-    }, 10);
+  let sideBarEle = document.querySelector(".side-bar-popup");
+  sideBarEle.classList.add("active");
+  setTimeout(function () {
+    sideBarEle.classList.add("show");
+  }, 10);
 }
 
 function closeSideBar() {
-    let sideBarEle = document.querySelector(".side-bar-popup");
-    sideBarEle.classList.remove('show');
-    setTimeout(function() {
-        sideBarEle.classList.remove('active');
-    }, 1000);
+  let sideBarEle = document.querySelector(".side-bar-popup");
+  sideBarEle.classList.remove("show");
+  setTimeout(function () {
+    sideBarEle.classList.remove("active");
+  }, 1000);
 }
 
 function openBookPopup() {
-    let popupEle = document.querySelector(".popupBook");
-    popupEle.classList.add('active');
-    setTimeout(function() {
-        popupEle.classList.add('show');
-    }, 10);
+  let popupEle = document.querySelector(".popupBook");
+  popupEle.classList.add("active");
+  setTimeout(function () {
+    popupEle.classList.add("show");
+  }, 10);
 }
 
 function closeBookPopup() {
-    let popupEle = document.querySelector(".popupBook");
-    popupEle.classList.remove('show');
-    setTimeout(function() {
-        popupEle.classList.remove('active');
-    }, 1000);
+  let popupEle = document.querySelector(".popupBook");
+  popupEle.classList.remove("show");
+  setTimeout(function () {
+    popupEle.classList.remove("active");
+  }, 1000);
 }
 
 function openMenuPopup() {
-    let popupEle = document.querySelector(".popupMenu");
-    popupEle.classList.add('active');
-    setTimeout(function() {
-        popupEle.classList.add('show');
-    }, 10);
+  let popupEle = document.querySelector(".popupMenu");
+  popupEle.classList.add("active");
+  setTimeout(function () {
+    popupEle.classList.add("show");
+  }, 10);
 }
 
 function closeMenuPopup() {
-    let popupEle = document.querySelector(".popupMenu");
-    popupEle.classList.remove('show');
-    setTimeout(function() {
-        popupEle.classList.remove('active');
-    }, 1000);
+  let popupEle = document.querySelector(".popupMenu");
+  popupEle.classList.remove("show");
+  setTimeout(function () {
+    popupEle.classList.remove("active");
+  }, 1000);
 }
 
 function updateIndicators() {
- 
-  let activeSlide = document.querySelector('.M-carousel-item.active'),
+  let activeSlide = document.querySelector(".M-carousel-item.active"),
     currentIndex = activeSlide.dataset.index;
 
-  indicators.forEach(function(indicator){
+  indicators.forEach(function (indicator) {
     if (indicator.dataset.index === currentIndex) {
-      indicator.classList.add('active');
+      indicator.classList.add("active");
     } else {
-      indicator.classList.remove('active');
+      indicator.classList.remove("active");
     }
   });
 }
 
 function setActiveLink(sectionName) {
-    navLinks.forEach(function(navLink) {
-        let parentEle = navLink.closest("li");
-        if (parentEle) {
-            parentEle.classList.remove("active");
-            if (navLink.dataset.section === sectionName) {
-                parentEle.classList.add("active");
-            }
-        }
-    });
+  navLinks.forEach(function (navLink) {
+    let parentEle = navLink.closest("li");
+    if (parentEle) {
+      parentEle.classList.remove("active");
+      if (navLink.dataset.section === sectionName) {
+        parentEle.classList.add("active");
+      }
+    }
+  });
 }
 
 function getSectionName(sectionId) {
-    let sectionNames = {
-        Home: "home",
-        AboutUs: "about",
-        OurStory: "story",
-        SpecialDish: "dish",
-        Menu: "menu",
-        OurChefs: "chef",
-        ContactUs: "contact"
-    };
-    return sectionNames[sectionId];
+  let sectionNames = {
+    Home: "home",
+    AboutUs: "about",
+    OurStory: "story",
+    SpecialDish: "dish",
+    Menu: "menu",
+    OurChefs: "chef",
+    ContactUs: "contact",
+  };
+  return sectionNames[sectionId];
 }
 
 function updateActiveOnScroll() {
-    let scrollPosition = window.scrollY + 150,
-        currentSection = sections[0];
-    sections.forEach(function (section) {
-        if (scrollPosition >= section.offsetTop) {
-            currentSection = section;
-        }
-    });
-    if (currentSection) {
-        let sectionLink = document.querySelector(
-            `.nav-links a[data-section="${getSectionName(currentSection.id)}"]`
-        );
-        if (sectionLink) {
-            setActiveLink(sectionLink.dataset.section);
-        }
+  let scrollPosition = window.scrollY + 150,
+    currentSection = sections[0];
+  sections.forEach(function (section) {
+    if (scrollPosition >= section.offsetTop) {
+      currentSection = section;
     }
+  });
+  if (currentSection) {
+    let sectionLink = document.querySelector(
+      `.nav-links a[data-section="${getSectionName(currentSection.id)}"]`,
+    );
+    if (sectionLink) {
+      setActiveLink(sectionLink.dataset.section);
+    }
+  }
 }
 
 let lastScrollPosition = window.scrollY;
 function moveNavbarScroll() {
-    // Add background after scrolling
-    if (window.scrollY > 10) {
-        navbarEle.classList.add("scrolled");
-    } else {
-        navbarEle.classList.remove("scrolled");
-    }
-    // Hide navbar when scrolling down
-    if (window.scrollY > lastScrollPosition && window.scrollY > 50) {
-        navbarEle.classList.add("hide-navbar");
-    } else if (window.scrollY < lastScrollPosition) {
-        navbarEle.classList.remove("hide-navbar");
-        // navbarEle.classList.add("scrolled");
-    }// Show navbar when scrolling up
-    lastScrollPosition = window.scrollY;
+  // Add background after scrolling
+  if (window.scrollY > 10) {
+    navbarEle.classList.add("scrolled");
+  } else {
+    navbarEle.classList.remove("scrolled");
+  }
+  // Hide navbar when scrolling down
+  if (window.scrollY > lastScrollPosition && window.scrollY > 50) {
+    navbarEle.classList.add("hide-navbar");
+  } else if (window.scrollY < lastScrollPosition) {
+    navbarEle.classList.remove("hide-navbar");
+    // navbarEle.classList.add("scrolled");
+  } // Show navbar when scrolling up
+  lastScrollPosition = window.scrollY;
 }
 
 function checkScrolledNavbar() {
@@ -131,16 +129,16 @@ function checkScrolledNavbar() {
 }
 
 function updateMenuLinkActive(selectedCategory) {
-    menuNavbar.forEach(function (link) {
-        link.classList.remove('active');
-        if (link.dataset.category === selectedCategory) {
-            link.classList.add('active');
-        } 
-    });
+  menuNavbar.forEach(function (link) {
+    link.classList.remove("active");
+    if (link.dataset.category === selectedCategory) {
+      link.classList.add("active");
+    }
+  });
 }
 
-function createMeal (meal) {
-    return `
+function createMeal(meal) {
+  return `
         <div class="meal row center" data-meal-category="${meal.type}" >
             <div class="col-4 col-lg-3 center">
                 <div class="image center position-relative" data-id="${meal.id}" data-type="${meal.type}">
@@ -164,46 +162,50 @@ function createMeal (meal) {
     `;
 }
 
-function showMeals(meal){
-    let selectedCategory = menuContainer.dataset.mealCategory,
-        categoryMeals = allMenu.filter(function(meal){
-            return meal.type === selectedCategory;
-        }),
-        middleIndex = Math.ceil(categoryMeals.length / 2),
-        leftMeals = categoryMeals.slice(0, middleIndex),
-        rightMeals = categoryMeals.slice(middleIndex),
-        meals = document.querySelector("#Menu .container .content .menuContent .meals");
-    leftColumn.innerHTML = leftMeals.map(function(meal){
-        return createMeal(meal);
+function showMeals(mealsToShow) {
+  let selectedCategory = menuContainer.dataset.mealCategory,
+    categoryMeals = allMenu.filter(function (meal) {
+      return meal.type === selectedCategory;
+    }),
+    meals = mealsToShow || categoryMeals,
+    middleIndex = Math.ceil(meals.length / 2),
+    leftMeals = meals.slice(0, middleIndex),
+    rightMeals = meals.slice(middleIndex);
+
+  leftColumn.innerHTML = leftMeals.map(function (meal) {
+      return createMeal(meal);
     }).join("");
-    rightColumn.innerHTML = rightMeals.map(function(meal){
-        return createMeal(meal);
+
+  rightColumn.innerHTML = rightMeals.map(function (meal) {
+      return createMeal(meal);
     }).join("");
 }
 
-function search(searchValue) {
-    let filteredMeals = allMenu.filter(function (meal) {
-        return meal.name.toLowerCase().includes(searchValue.toLowerCase());  
-    });
-    showMeals(filteredMeals);
+function isNoMeals(meal){
+    let isNoMealsAlert = document.querySelector("#IsNoMealsAlert");
+    // console.log(isNoMealsAlert);
+    if(meal.length == 0){
+        isNoMealsAlert.classList.remove("d-none");
+    }else{
+        isNoMealsAlert.classList.add("d-none");
+    }
 }
 
-let currentMealId,
-    currentCategory;
+let currentMealId, currentCategory;
 function getMeal(mealId) {
-    return allMenu.filter((meal) => meal.id == mealId)[0];
+  return allMenu.filter((meal) => meal.id == mealId)[0];
 }
 
 function showMeal(mealId) {
-    let meal = getMeal(mealId),
-        popupMenuContent = document.querySelector(
-        `.popUp[data-name="meal"] .box .content`
-        );
-    currentMealId = meal.id; 
-    currentCategory = allMenu.filter((item) => {
-        return item.type === meal.type;
-    });   
-    popupMenuContent.innerHTML = `
+  let meal = getMeal(mealId),
+    popupMenuContent = document.querySelector(
+      `.popUp[data-name="meal"] .box .content`,
+    );
+  currentMealId = meal.id;
+  currentCategory = allMenu.filter((item) => {
+    return item.type === meal.type;
+  });
+  popupMenuContent.innerHTML = `
         <h2 class="display-6 text-light mb-3" id="mealName">${meal.name}</h2>
         <div class="image-carousel position-relative">
             <div class="meal-image"><img class="img-fluid" src="./images/${meal.images[0]}" alt="Menu"></div>
@@ -215,68 +217,75 @@ function showMeal(mealId) {
             <p>${meal.description}</p>
         </div>
         `;
-    openMenuPopup("meal");
+  openMenuPopup("meal");
 }
 
 function showPreviousMeal() {
-    let currentIndex = currentCategory.findIndex((meal) => meal.id == currentMealId),
-        previousIndex = (currentIndex - 1 + currentCategory.length) % currentCategory.length;
-    showMeal(currentCategory[previousIndex].id);
+  let currentIndex = currentCategory.findIndex(
+      (meal) => meal.id == currentMealId,
+    ),
+    previousIndex =
+      (currentIndex - 1 + currentCategory.length) % currentCategory.length;
+  showMeal(currentCategory[previousIndex].id);
 }
 
 function showNextMeal() {
-    let currentIndex = currentCategory.findIndex((meal) => meal.id == currentMealId),
-        nextIndex = (currentIndex + 1) % currentCategory.length;
-    showMeal(currentCategory[nextIndex].id);
+  let currentIndex = currentCategory.findIndex(
+      (meal) => meal.id == currentMealId,
+    ),
+    nextIndex = (currentIndex + 1) % currentCategory.length;
+  showMeal(currentCategory[nextIndex].id);
 }
 
-function checkInput (input) {
-    let inputName = input.name,
-        inputValue = input.value,
-        isEmpty = inputValue === "",
-        errorEle = document.querySelector(`p.alert-msg[data-error-name ="${inputName}"]`),
-        isInvalid = !regexInputs[inputName].test(inputValue),
-        errorMessage = "";
-    
-    if (isEmpty){
-        errorMessage = "This field is required.";
-    }else if (isInvalid){
-        errorMessage = "Invalid field."
-    }
-    if(isEmpty || isInvalid){
-        //false
-        input.classList.add("is-invalid");
-        errorEle.textContent = errorMessage;
-        errorEle.classList.remove("d-none");
-        input.classList.remove("is-valid");
-        input.dataset.valid = false;
+function checkInput(input) {
+  let inputName = input.name,
+    inputValue = input.value,
+    isEmpty = inputValue === "",
+    errorEle = document.querySelector(
+      `p.alert-msg[data-error-name ="${inputName}"]`,
+    ),
+    isInvalid = !regexInputs[inputName].test(inputValue),
+    errorMessage = "";
 
-    }else{
-        //true
-        input.classList.remove("is-invalid");
-        errorEle.classList.add("d-none");
-        input.classList.add("is-valid");
-        input.dataset.valid = true;
-    }
-
+  if (isEmpty) {
+    errorMessage = "This field is required.";
+  } else if (isInvalid) {
+    errorMessage = "Invalid field.";
+  }
+  if (isEmpty || isInvalid) {
+    //false
+    input.classList.add("is-invalid");
+    errorEle.textContent = errorMessage;
+    errorEle.classList.remove("d-none");
+    input.classList.remove("is-valid");
+    input.dataset.valid = false;
+  } else {
+    //true
+    input.classList.remove("is-invalid");
+    errorEle.classList.add("d-none");
+    input.classList.add("is-valid");
+    input.dataset.valid = true;
+  }
 }
 
-//reset form 
+//reset form
 function resetForm() {
-    form.reset();
-    inputs.forEach(function (input) {
-        input.classList.remove("is-valid");
-        input.classList.remove("is-invalid");
-        document.querySelector(`p.alert-msg[data-error-name="${input.name}"]`).classList.add("d-none");
-    });
-    form.setAttribute('data-type', 'add');
-    iconResetRemove(); 
+  form.reset();
+  inputs.forEach(function (input) {
+    input.classList.remove("is-valid");
+    input.classList.remove("is-invalid");
+    document
+      .querySelector(`p.alert-msg[data-error-name="${input.name}"]`)
+      .classList.add("d-none");
+  });
+  form.setAttribute("data-type", "add");
+  iconResetRemove();
 }
 
 function iconReset() {
-    resetIcon.classList.remove('d-none');
+  resetIcon.classList.remove("d-none");
 }
 
 function iconResetRemove() {
-    resetIcon.classList.add('d-none');
+  resetIcon.classList.add("d-none");
 }

@@ -22,10 +22,10 @@ let sideBarBox = document.querySelector(".side-bar-popup .box"),
     message: /[a-zA-Z]+/gm,
   },
   resetIcon = document.querySelector(
-    "#ContactUs .container .box1 .form form .reset"
+    "#ContactUs .container .box1 .form form .reset",
   ),
   menuNavbar = document.querySelectorAll(
-    "#Menu .container .content .categories ul li"
+    "#Menu .container .content .categories ul li",
   ),
   loadingPage = document.querySelector(".landing-page"),
   menuContainer = document.querySelector("#menuContainer"),
@@ -44,7 +44,7 @@ sideBarBox.addEventListener("click", function (e) {
 checkScrolledNavbar();
 updateActiveOnScroll();
 
-popupBox.forEach(function(box){
+popupBox.forEach(function (box) {
   box.addEventListener("click", function (e) {
     e.stopPropagation();
   });
@@ -117,11 +117,11 @@ window.addEventListener("DOMContentLoaded", function () {
 });
 
 let progressPar = document.querySelector(".scroll-progress");
-window.addEventListener("scroll", function(){
+window.addEventListener("scroll", function () {
   let scrollTop = window.scrollY,
-     scrollHeight = document.documentElement.scrollHeight - window.innerHeight,
-     scrollPercentage = (scrollTop / scrollHeight) * 100;
-  progressPar.style.width = scrollPercentage + "%";   
+    scrollHeight = document.documentElement.scrollHeight - window.innerHeight,
+    scrollPercentage = (scrollTop / scrollHeight) * 100;
+  progressPar.style.width = scrollPercentage + "%";
 });
 
 menuNavbar.forEach(function (link) {
@@ -133,24 +133,21 @@ menuNavbar.forEach(function (link) {
   });
 });
 
-searchInput.addEventListener("input", function () {
-    console.log(this.value);
-    search(this.value);
+searchInput.addEventListener("keyup", function () {
+  function search(searchValue) {
+    let selectedCategory = menuContainer.dataset.mealCategory,
+      categoryMeals = allMenu.filter(function (meal) {
+        return meal.type === selectedCategory;
+      }),
+      filteredMeals = categoryMeals.filter(function (meal) {
+        return meal.name.toLowerCase().includes(searchValue.toLowerCase());
+      });
+    showMeals(filteredMeals);
+    isNoMeals(filteredMeals);
+  }
+  search(this.value);
 });
 
 cancelBtn.addEventListener("click", function () {
   searchInput.value = "";
 });
-
-
-//  console.log(searchInput.value);
-//   let query = searchInput.value.toLowerCase();
-//   allMenu.forEach(function(meal){
-//     let content = meal.name.toLowerCase();
-//     console.log(meal.name);
-//     if (content.includes(query)) {
-//       meal.style.display = "block";
-//     } else {
-//       meal.style.display = "none";
-//     }
-//   });

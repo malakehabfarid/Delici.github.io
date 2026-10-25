@@ -16,6 +16,11 @@
 
 body {
     font-family: "DM Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+.mainColor{
+    color: var(--mainColor);
 }
 
 h1,
